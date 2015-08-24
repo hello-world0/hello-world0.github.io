@@ -27,7 +27,7 @@
         .highlight { background-color: yellow; font-weight: 900; }
         .tdheader { text-align:center; background-color:#4169E1; color:#fff; }
         tr:nth-child(even) { background-color: #e7e7e7; }
-        table tr td { border:1px solid #4169E1; color:#111; cursor:pointer;}
+        #indP table tr td { border:1px solid #eeeeee; color:#111; cursor:pointer;}
         table tr:hover td { border-left-color: blue; }
         
         /*#tb1 tr td { border-color: #e4e4e4 ; }
@@ -168,13 +168,13 @@
                 </div>
             </div>
             <br /><br />
-                <div class="row">
+                <div class="row" id="indP">
                     <h3>Make My Own Packages</h3>
                 
                     <div class="col-md-2">
                     
                     <table class="table table-bordered" id="tb1">
-                        <tr><td colspan="2" class="tdheader"><h4>Ontray</h4></td></tr>
+                        <tr><th colspan="2" class="tdheader"><h4>Ontray</h4></th></tr>
                         <tr><td>Puri</td><td>$&nbsp;2</td></tr>
                         <tr><td>Chop</td><td>$&nbsp;2</td></tr>
                         <tr><td>Shingara</td><td>$&nbsp;2</td></tr>
@@ -191,7 +191,7 @@
 
                     <div class="col-md-2">
                     <table class="table table-bordered" id="tb2">
-                        <tr><td colspan="2" class="tdheader"><h4>Soup</h4></td></tr>
+                        <tr><th colspan="2" class="tdheader"><h4>Soup</h4></th></tr>
                         <tr><td>Corn Soup</td><td>$&nbsp;3</td></tr>
                         <tr><td>Tomyum</td><td>$&nbsp;3</td></tr>
                         <tr><td>Thai Soup</td><td>$&nbsp;3</td></tr>
@@ -201,7 +201,7 @@
                     <div class="col-md-2">
                     
                     <table class="table table-bordered" id="tb3">
-                        <tr><td colspan="2" class="tdheader"><h4>Rice</h4></td></tr>
+                        <tr><th colspan="2" class="tdheader"><h4>Rice</h4></th></tr>
                         <tr><td>Biriyani</td><td>$&nbsp;7</td></tr>
                         <tr><td>Fried Rice</td><td>$&nbsp;6</td></tr>
                         <tr><td>Pulau</td><td>$&nbsp;3</td></tr>
@@ -211,7 +211,7 @@
 
                     <div class="col-md-2">                    
                     <table class="table table-bordered" id="tb4">
-                        <tr><td colspan="2" class="tdheader"><h4>Main</h4></td></tr>
+                        <tr><th colspan="2" class="tdheader"><h4>Main</h4></th></tr>
                         <tr><td>Chicken Roast</td><td>$&nbsp;5</td></tr>
                         <tr><td>Prawn Malai Curry</td><td>$&nbsp;5</td></tr>
                         <tr><td>Beef Rezala</td><td>$&nbsp;4</td></tr>
@@ -229,7 +229,7 @@
                     <div class="col-md-2">
                     
                     <table class="table table-bordered" id="tb5">
-                        <tr><td colspan="2" class="tdheader"><h4>Dessert</h4></td></tr>
+                        <tr><th colspan="2" class="tdheader"><h4>Dessert</h4></th></tr>
                         <tr><td>Firni (kheer)</td><td>$&nbsp;3</td></tr>
                         <tr><td>Lychee Custard</td><td>$&nbsp;2</td></tr>
                         <tr><td>Pudding (coconut / mango)</td><td>$&nbsp;2</td></tr>
@@ -238,7 +238,7 @@
 
                     <div class="col-md-2">                    
                     <table class="table table-bordered" id="tb6">
-                        <tr><td colspan="2" class="tdheader"><h4>Drinks</h4></td></tr>
+                        <tr><th colspan="2" class="tdheader"><h4>Drinks</h4></th></tr>
                         <tr><td>Lacchi</td><td>$&nbsp;2</td></tr>
                         <tr><td>Ghol</td><td>$&nbsp;2</td></tr>
                     </table>
@@ -944,7 +944,7 @@
 
     <script>
         $(document).ready(function () {
-            $("table tr").click(function () {
+            $("#indP table tr").click(function () {
                 //alert("You clicked my <tr>!");
                 $(this).children("td").toggleClass("highlight");
                 //get <td> element values here!!??

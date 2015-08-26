@@ -25,17 +25,12 @@
     <style>
         /*.highlight { background-color:yellow; font-weight:700;}*/
         .highlight { background-color: yellow; font-weight: 900; }
-        .tdheader { text-align:center; background-color:#4169E1; color:#fff; }
-        tr:nth-child(even) { background-color: #e7e7e7; }
-        #indP table tr td { border:1px solid #eeeeee; color:#111; cursor:pointer;}
+        th, .tdheader { text-align:center; /*background-color:#4169E1;*/ background-color:#9d660f; color:#fff; font-weight:400; }
+        tr:nth-child(even) { background-color: #eee; }
+        #pkg table tr td { border:1px solid #eee; color:#9d660f; cursor:pointer;}
+        #indP table tr td { border:1px solid #eee; color:#9d660f; cursor:pointer;}
         table tr:hover td { border-left-color: blue; }
         
-        /*#tb1 tr td { border-color: #e4e4e4 ; }
-        #tb2 tr td { border-color: #e5e5e5 ; }
-        #tb3 tr td { border-color: #e6e6e6 ; }
-        #tb4 tr td { border-color: #e7e7e7 ; }
-        #tb5 tr td { border-color: #e8e8e8 ; }
-        #tb6 tr td { border-color: #e9e9e9 ; }*/
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -45,8 +40,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
-
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/modernizr.custom.70736.js"></script>
+		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
 </head>
 
 <body id="page-top" class="index">
@@ -103,9 +99,9 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Lazis Kitchen!</div>
-                <div class="intro-heading">Highest Quality Bangladeshi Meal just for you</div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                <div class="intro-lead-in">Welcome to Lazis Kitchen!</div>
+               <!-- <div class="intro-heading" style="color:#222;">Quality Bangladeshi Meal just for you</div>-->
+                <a href="#portfolio" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
     </header>
@@ -124,10 +120,10 @@
             <div class="row">
                 <h3>Our Packages</h3>
             </div>
-            <div class="row">
+            <div class="row" id="pkg">
                 <div class="col-md-3">
                     <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Bangladeshi</h4></td></tr>
+                        <tr><th><h4>Bangladeshi</h4></th></tr>
                         <tr><td>Pulau</td></tr>
                         <tr><td>Roast</td></tr>
                         <tr><td>Rezala</td></tr>
@@ -138,7 +134,7 @@
 
                 <div class="col-md-3">
                     <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Bangladeshi</h4></td></tr>
+                        <tr><th><h4>Bangladeshi</h4></th></tr>
                         <tr><td>Biriyani</td></tr>
                         <tr><td>Roast</td></tr>
                         <tr><td>Vegetable</td></tr>
@@ -148,7 +144,7 @@
 
                 <div class="col-md-3">
                     <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Bangali Chinese</h4></td></tr>
+                        <tr><th><h4>Bangali Chinese</h4></th></tr>
                         <tr><td>Thai Soup</td></tr>
                         <tr><td>Fried Chicken</td></tr>
                         <tr><td>Fried Rice</td></tr>
@@ -159,7 +155,7 @@
                 
                 <div class="col-md-3">
                     <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Indian</h4></td></tr>
+                        <tr><th><h4>Indian</h4></th></tr>
                         <tr><td>Peas Pulau</td></tr>
                         <tr><td>Butter Chicken or Chicken 65</td></tr>
                         <tr><td>Vegetable Korma</td></tr>
@@ -171,7 +167,7 @@
                 <div class="row" id="indP">
                     <h3>Make My Own Packages</h3>
                 
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                     
                     <table class="table table-bordered" id="tb1">
                         <tr><th colspan="2" class="tdheader"><h4>Ontray</h4></th></tr>
@@ -189,7 +185,15 @@
                     </table>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-md-3">
+                        <table class="table table-bordered" id="tb3">
+                        <tr><th colspan="2" class="tdheader"><h4>Rice</h4></th></tr>
+                        <tr><td>Biriyani</td><td>$&nbsp;7</td></tr>
+                        <tr><td>Fried Rice</td><td>$&nbsp;6</td></tr>
+                        <tr><td>Pulau</td><td>$&nbsp;3</td></tr>
+                        <tr><td>Peas Pulau</td><td>$&nbsp;3</td></tr>
+                    </table>
+                        <br /><br/>
                     <table class="table table-bordered" id="tb2">
                         <tr><th colspan="2" class="tdheader"><h4>Soup</h4></th></tr>
                         <tr><td>Corn Soup</td><td>$&nbsp;3</td></tr>
@@ -198,18 +202,12 @@
                     </table>
                     </div>
 
-                    <div class="col-md-2">
+                    <!--<div class="col-md-2">
                     
-                    <table class="table table-bordered" id="tb3">
-                        <tr><th colspan="2" class="tdheader"><h4>Rice</h4></th></tr>
-                        <tr><td>Biriyani</td><td>$&nbsp;7</td></tr>
-                        <tr><td>Fried Rice</td><td>$&nbsp;6</td></tr>
-                        <tr><td>Pulau</td><td>$&nbsp;3</td></tr>
-                        <tr><td>Peas Pulau</td><td>$&nbsp;3</td></tr>
-                    </table>
-                    </div>
+                    
+                    </div>-->
 
-                    <div class="col-md-2">                    
+                    <div class="col-md-3">                    
                     <table class="table table-bordered" id="tb4">
                         <tr><th colspan="2" class="tdheader"><h4>Main</h4></th></tr>
                         <tr><td>Chicken Roast</td><td>$&nbsp;5</td></tr>
@@ -226,7 +224,7 @@
                     </table>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                     
                     <table class="table table-bordered" id="tb5">
                         <tr><th colspan="2" class="tdheader"><h4>Dessert</h4></th></tr>
@@ -234,15 +232,17 @@
                         <tr><td>Lychee Custard</td><td>$&nbsp;2</td></tr>
                         <tr><td>Pudding (coconut / mango)</td><td>$&nbsp;2</td></tr>
                     </table>
-                    </div>
-
-                    <div class="col-md-2">                    
-                    <table class="table table-bordered" id="tb6">
+                        <br /><br />
+                        <table class="table table-bordered" id="tb6">
                         <tr><th colspan="2" class="tdheader"><h4>Drinks</h4></th></tr>
                         <tr><td>Lacchi</td><td>$&nbsp;2</td></tr>
                         <tr><td>Ghol</td><td>$&nbsp;2</td></tr>
                     </table>
                     </div>
+
+                    <!--<div class="col-md-2">                    
+                    
+                    </div>-->
                 
                 </div>
 
@@ -345,54 +345,41 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Gallery</h2>
-                    <h3 class="section-subheading text-muted">What are we good at?</h3>
+                    <h3 class="section-subheading text-muted">You can enjoy our taste and smell. For now, just enjoy the photos.</h3>
                 </div>
             </div>
             <div class="row">
                 <h3>Our Packages</h3>
             </div>
             <div class="row">
-                <div class="col-md-3">
-                    <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Bangladeshi</h4></td></tr>
-                        <tr><td>Pulau</td></tr>
-                        <tr><td>Roast</td></tr>
-                        <tr><td>Rezala</td></tr>
-                        <tr><td>Vegetable</td></tr>
-                        <tr><td>Kebab</td></tr>
-                    </table>
-                </div>
+                <div class="gamma-container gamma-loading" id="gamma-container">
 
-                <div class="col-md-3">
-                    <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Bangladeshi</h4></td></tr>
-                        <tr><td>Biriyani</td></tr>
-                        <tr><td>Roast</td></tr>
-                        <tr><td>Vegetable</td></tr>
-                        <tr><td>Kebab</td></tr>
-                    </table>                    
-                </div>
+					<ul class="gamma-gallery">
+                        
+                        <!--<li>
+							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div>
+								<div data-src="images/xlarge/3.jpg" data-min-width="700"></div>
+								<div data-src="images/large/3.jpg" data-min-width="300"></div>
+								<div data-src="images/medium/3.jpg" data-min-width="200"></div>
+								<div data-src="images/small/3.jpg" data-min-width="140"></div>
+								<div data-src="images/xsmall/3.jpg"></div>
+								<noscript>
+									<img src="images/xsmall/3.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>-->
+						<li><div data-alt='img1' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/1.jpg' data-min-width='200'></div><div data-src='images/small/1.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/1.jpg' alt='img1'/></noscript></div></li><li><div data-alt='img2' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/2.jpg' data-min-width='200'></div><div data-src='images/small/2.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/2.jpg' alt='img2'/></noscript></div></li><li><div data-alt='img3' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/3.jpg' data-min-width='200'></div><div data-src='images/small/3.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/3.jpg' alt='img3'/></noscript></div></li><li><div data-alt='img4' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/4.jpg' data-min-width='200'></div><div data-src='images/small/4.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/4.jpg' alt='img4'/></noscript></div></li><li><div data-alt='img5' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/5.jpg' data-min-width='200'></div><div data-src='images/small/5.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/5.jpg' alt='img5'/></noscript></div></li><li><div data-alt='img6' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/6.jpg' data-min-width='200'></div><div data-src='images/small/6.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/6.jpg' alt='img6'/></noscript></div></li><li><div data-alt='img7' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/7.jpg' data-min-width='200'></div><div data-src='images/small/7.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/7.jpg' alt='img7'/></noscript></div></li><li><div data-alt='img8' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/8.jpg' data-min-width='200'></div><div data-src='images/small/8.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/8.jpg' alt='img8'/></noscript></div></li><li><div data-alt='img9' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/9.jpg' data-min-width='200'></div><div data-src='images/small/9.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/9.jpg' alt='img9'/></noscript></div></li><li><div data-alt='img10' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/10.jpg' data-min-width='200'></div><div data-src='images/small/10.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/10.jpg' alt='img10'/></noscript></div></li><li><div data-alt='img11' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/11.jpg' data-min-width='200'></div><div data-src='images/small/11.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/11.jpg' alt='img11'/></noscript></div></li><li><div data-alt='img12' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/12.jpg' data-min-width='200'></div><div data-src='images/small/12.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/12.jpg' alt='img12'/></noscript></div></li><li><div data-alt='img13' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/13.jpg' data-min-width='200'></div><div data-src='images/small/13.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/13.jpg' alt='img13'/></noscript></div></li><li><div data-alt='img14' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/14.jpg' data-min-width='200'></div><div data-src='images/small/14.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/14.jpg' alt='img14'/></noscript></div></li><li><div data-alt='img15' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/15.jpg' data-min-width='200'></div><div data-src='images/small/15.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/15.jpg' alt='img15'/></noscript></div></li><li><div data-alt='img16' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/16.jpg' data-min-width='200'></div><div data-src='images/small/16.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/16.jpg' alt='img16'/></noscript></div></li><li><div data-alt='img17' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/17.jpg' data-min-width='200'></div><div data-src='images/small/17.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/17.jpg' alt='img17'/></noscript></div></li><li><div data-alt='img18' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/18.jpg' data-min-width='200'></div><div data-src='images/small/18.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/18.jpg' alt='img18'/></noscript></div></li><li><div data-alt='img19' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/19.jpg' data-min-width='200'></div><div data-src='images/small/19.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/19.jpg' alt='img19'/></noscript></div></li><li><div data-alt='img20' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/20.jpg' data-min-width='200'></div><div data-src='images/small/20.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/20.jpg' alt='img20'/></noscript></div></li><li><div data-alt='img21' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/21.jpg' data-min-width='200'></div><div data-src='images/small/21.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/21.jpg' alt='img21'/></noscript></div></li><li><div data-alt='img22' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/22.jpg' data-min-width='200'></div><div data-src='images/small/22.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/22.jpg' alt='img22'/></noscript></div></li><li><div data-alt='img23' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/23.jpg' data-min-width='200'></div><div data-src='images/small/23.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/23.jpg' alt='img23'/></noscript></div></li><li><div data-alt='img24' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/24.jpg' data-min-width='200'></div><div data-src='images/small/24.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/24.jpg' alt='img24'/></noscript></div></li><li><div data-alt='img25' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/25.jpg' data-min-width='200'></div><div data-src='images/small/25.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/25.jpg' alt='img25'/></noscript></div></li><li><div data-alt='img26' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/26.jpg' data-min-width='200'></div><div data-src='images/small/26.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/26.jpg' alt='img26'/></noscript></div></li><li><div data-alt='img27' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/27.jpg' data-min-width='200'></div><div data-src='images/small/27.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/27.jpg' alt='img27'/></noscript></div></li><li><div data-alt='img28' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/28.jpg' data-min-width='200'></div><div data-src='images/small/28.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/28.jpg' alt='img28'/></noscript></div></li><li><div data-alt='img29' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/29.jpg' data-min-width='200'></div><div data-src='images/small/29.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/29.jpg' alt='img29'/></noscript></div></li><li><div data-alt='img30' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/30.jpg' data-min-width='200'></div><div data-src='images/small/30.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/30.jpg' alt='img30'/></noscript></div></li><li><div data-alt='img31' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/31.jpg' data-min-width='200'></div><div data-src='images/small/31.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/31.jpg' alt='img31'/></noscript></div></li><li><div data-alt='img32' data-description='<h3></h3>' data-max-width='1800' data-max-height='1350'><div data-src='images/medium/32.jpg' data-min-width='200'></div><div data-src='images/small/32.jpg' data-min-width='140'></div><noscript><img src='images/xsmall/32.jpg' alt='img32'/></noscript></div></li>
 
-                <div class="col-md-3">
-                    <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Bangali Chinese</h4></td></tr>
-                        <tr><td>Thai Soup</td></tr>
-                        <tr><td>Fried Chicken</td></tr>
-                        <tr><td>Fried Rice</td></tr>
-                        <tr><td>Chilli Chicken</td></tr>
-                        <tr><td>Vegetable</td></tr>
-                    </table>
-                </div>
-                
-                <div class="col-md-3">
-                    <table class="table table-bordered">
-                        <tr><td class="tdheader"><h4>Indian</h4></td></tr>
-                        <tr><td>Peas Pulau</td></tr>
-                        <tr><td>Butter Chicken or Chicken 65</td></tr>
-                        <tr><td>Vegetable Korma</td></tr>
-                        <tr><td>Kebab</td></tr>
-                    </table>
-                </div>
+						
+					</ul>
+
+					<div class="gamma-overlay"></div>
+
+					<div id="loadmore" class="loadmore">Example for loading more items...</div>
+
+				</div>
             </div>
             <br /><br />               
         </div>
@@ -951,6 +938,70 @@
             });
         });
     </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="js/jquery.masonry.min.js"></script>
+		<script src="js/jquery.history.js"></script>
+		<script src="js/js-url.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/gamma.js"></script>
+		<script type="text/javascript">
+
+		    $(function () {
+
+		        var GammaSettings = {
+		            // order is important!
+		            viewport: [{
+		                width: 1200,
+		                columns: 5
+		            }, {
+		                width: 900,
+		                columns: 4
+		            }, {
+		                width: 500,
+		                columns: 3
+		            }, {
+		                width: 320,
+		                columns: 2
+		            }, {
+		                width: 0,
+		                columns: 2
+		            }]
+		        };
+
+		        Gamma.init(GammaSettings, fncallback);
+
+
+		        // Example how to add more items (just a dummy):
+
+		        var page = 0,
+					items = ['<li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li>']
+
+		        function fncallback() {
+
+		            $('#loadmore').show().on('click', function () {
+
+		                ++page;
+		                var newitems = items[page - 1]
+		                if (page <= 1) {
+
+		                    Gamma.add($(newitems));
+
+		                }
+		                if (page === 1) {
+
+		                    $(this).remove();
+
+		                }
+
+		            });
+
+		        }
+
+		    });
+
+		</script>	
 
 </body>
 
